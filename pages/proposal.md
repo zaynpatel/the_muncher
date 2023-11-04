@@ -1,11 +1,7 @@
 ---
-layout: post
-title: "PIE Project Proposal"
-author: "Kenta, Ian, Matt, Mihir, Zayn"
-categories: documentation
-tags: [documentation,sample]
-image: rover_concept.png
-permalink: /welcome-to-millenial/
+layout: page
+title: Project Proposal
+permalink: /proposal
 ---
 
 The MuNCHER is an acronym for **Multidirectionally Navigable and Computationally Helmed Exploratory Rover.** 

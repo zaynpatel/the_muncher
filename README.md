@@ -1,5 +1,9 @@
 # The MuNCHER: (Multidirectionally Navigable and Computationally Helmed Exploratory Rover)
 ## Kenta, Zayn, Ian, Matt, Mihir - Final PIE Project, Fall 2023
+<img width="1301" alt="Concept Mars Rover" src="https://github.com/zaynpatel/the_muncher/assets/28767801/4a24e8a3-ca0a-447f-a0e2-03dde4cee123">
+
+### An Extraterrestrial Endeavor
+Our goal in this project is to create an all-terrain 6-wheel direct drive rover capable of collecting several soil samples, autonomously navigating its surroundings, and streaming data back to a 'base camp.'
 
 ## Initial Objectives
 | | MVP | Goal | Reach
@@ -11,5 +15,4 @@ Software  | Driven by live inputs from remote controller | First Person View Con
 
 
 
-## An Extraterrestrial Endeavor
-Our goal in this project is to create an all-terrain 6-wheel direct drive rover capable of collecting several soil samples, autonomously navigating its surroundings, and streaming data back to a 'base camp.'
+

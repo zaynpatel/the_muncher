@@ -1,5 +1,31 @@
 #include <ESP32Encoder.h>
+#include <PID_v1.h>
 
+// to-do
+// comment out the PID controllers we're not going to use because there are no quadrature encoders on this
+// figure out what the implication of not having all 4 quadrature encoders is
+
+// define PID variables for all the motors
+double setPointFrontLeft, inputFrontLeft, outputFrontLeft; // PointFrontLeft is the PID target value of the controller, inputFrontLeft is the current actual value from process, outputFrontLeft used to control motor (this should be PWM signal value to control speed)
+double setPointFrontRight, inputFrontRight, outputFrontRight;
+double setPointBackRight, inputBackRight, outputBackRight;
+double setPointBackLeft, inputBackLeft, outputBackLeft;
+
+
+// these gains are crucial to match the dynamics of our system
+// kp (how aggressively the PID reacts to the current error)
+// ki (influence of the sum of past errors)
+// kd (influence of rate of change of error - helps predict future error)
+double KpFrontLeft = 2.0,  KiFrontLeft = 5.0,   KdFrontLeft = 2.0;
+double KpFrontRight = 2.0, KiFrontRight = 5.0,  KdFrontRight = 2.0;
+double KpBackRight = 2.0,  KiBackRight = 5.0,   KdBackRight = 2.0;
+double KpBackLeft = 2.0,   KiBackLeft = 5.0,    KdBackLeft = 2.0;
+
+// Instantiate objects for each PIE
+PID pidFrontLeft(&inputFrontLeft, &outputFrontLeft, &setPointFrontLeft, KpFrontLeft, KiFrontLeft, KdFrontLeft, DIRECT);
+PID pidFrontRight(&inputFrontRight, &outputFrontRight, &setPointFrontRight, KpFrontRight, KiFrontRight, KdFrontRight, DIRECT);
+PID pidBackLeft(&inputBackLeft, &outputBackLeft, &setPointBackLeft, KpBackLeft, KiBackLeft, KdBackLeft, DIRECT);
+PID pidBackRight(&inputBackRight, &outputBackRight, &setPointBackRight, KpBackRight, KiBackRight, KdBackRight, DIRECT);
 
 ESP32Encoder frontL;
 ESP32Encoder frontR;
@@ -27,12 +53,12 @@ ESP32Encoder rearR;
 #define BACK_RIGHT 3
 #define BACK_RIGHT_QUAD_A   33
 #define BACK_RIGHT_QUAD_B   32
-#define BACK_RIGHT_PWM      22
-#define BACK_RIGHT_DIR      23
+#define BACK_RIGHT_PWM      3
+#define BACK_RIGHT_DIR      1
 
 void setup(){
-	
-	Serial.begin(115200);
+  
+  Serial.begin(115200);
 
   //Set up motor encoders
   setupEncoders();
@@ -40,48 +66,43 @@ void setup(){
   //Set up motor drives
   setupMotors();
 
-  //TODO: Create PID loops
-}
+  // Initialize all PID controllers
+  pidFrontLeft.SetMode(AUTOMATIC);
+  pidFrontLeft.SetOutputLimits(-255, 255);
 
-#define SPEED 30
+  pidFrontRight.SetMode(AUTOMATIC);
+  pidFrontRight.SetOutputLimits(-255, 255);
+
+  pidBackLeft.SetMode(AUTOMATIC);
+  pidBackLeft.SetOutputLimits(-255, 255);
+
+  pidBackRight.SetMode(AUTOMATIC);
+  pidBackRight.SetOutputLimits(-255, 255);
+  
+}
 
 void loop(){
-	// Loop and read the count
-	Serial.println("Encoder count = " + String((int32_t)frontL.getCount()) + " " + String((int32_t)frontR.getCount()) + " " + String((int32_t)rearL.getCount()) + " " + String((int32_t)rearR.getCount()));
-	delay(100);
- 
- if(millis() < 6000) {
- writeMotor( 0, SPEED);
- writeMotor( 1, SPEED);
- writeMotor( 2, SPEED);
- writeMotor( 3, SPEED);
-}
- else if(millis() < 12000) {
- writeMotor( 0, -SPEED);
- writeMotor( 1, -SPEED);
- writeMotor( 2, -SPEED);
- writeMotor( 3, -SPEED);
-}
+  // Loop and read the count
+  Serial.println("Encoder count = " + String((int32_t)frontL.getCount()) + " " + String((int32_t)frontR.getCount()) + " " + String((int32_t)rearL.getCount()) + " " + String((int32_t)rearR.getCount()));
+  delay(100);
 
- else if(millis() < 18000) {
- writeMotor( 0, SPEED);
- writeMotor( 1, -SPEED);
- writeMotor( 2, SPEED);
- writeMotor( 3, -SPEED);
-}
+  // Update the input for each PID controller
+  inputFrontLeft = frontL.getCount();
+  inputFrontRight = frontR.getCount();
+  inputBackLeft = rearL.getCount();
+  inputBackRight = rearR.getCount();
 
- else if(millis() < 24000) {
- writeMotor( 0, -SPEED);
- writeMotor( 1, SPEED);
- writeMotor( 2, -SPEED);
- writeMotor( 3, SPEED);
-}
-else {
-  writeMotor( 0, 0);
-  writeMotor( 1, 0);
-  writeMotor( 2, 0);
-  writeMotor( 3, 0);
-}
+  // Compute the new PID output value for each motor
+  pidFrontLeft.Compute();
+  pidFrontRight.Compute();
+  pidBackLeft.Compute();
+  pidBackRight.Compute();
+
+  // Use the output to control the motor speed and direction
+  writeMotor(FRONT_LEFT, outputFrontLeft);
+  writeMotor(FRONT_RIGHT, outputFrontRight);
+  writeMotor(BACK_LEFT, outputBackLeft);
+  writeMotor(BACK_RIGHT, outputBackRight);
 }
 
 void setupMotors() {
@@ -93,9 +114,9 @@ void setupMotors() {
   
   // attach the channel to the GPIO to be controlled
   ledcAttachPin(FRONT_LEFT_PWM,  0);
-  ledcAttachPin(FRONT_RIGHT_PWM, 1);
-  ledcAttachPin(BACK_LEFT_PWM,   2);
-  ledcAttachPin(BACK_RIGHT_PWM,  3);
+  ledcAttachPin(FRONT_RIGHT_PWM, 0);
+  ledcAttachPin(BACK_LEFT_PWM,   0);
+  ledcAttachPin(BACK_RIGHT_PWM,  0);
 
   //Init all motors to speed 0
   ledcWrite(FRONT_LEFT,  0);
@@ -137,32 +158,36 @@ void setupEncoders() {
 }
 
 
-void writeMotor(uint8_t motor, int speedVector) {
-  int speed = min(abs(speedVector), 255);
-  bool direction = speedVector < 0;
+// Updated writeMotor function to work with PID outputs
+void writeMotor(uint8_t motor, int output) {
+  int speed = abs(output); // Get the absolute value for speed
+  if (speed > 255) speed = 255; // Constrain the speed to 255
+
+  bool direction = output >= 0; // Determine the direction based on the sign of the output
 
   switch(motor) {
     case FRONT_LEFT:
-      digitalWrite(FRONT_LEFT_DIR, direction);
-      ledcWrite(FRONT_LEFT, speed);
+      digitalWrite(FRONT_LEFT_DIR, direction ? HIGH : LOW); // Set direction
+      ledcWrite(FRONT_LEFT, speed); // Set speed
       return;
     case FRONT_RIGHT:
-      digitalWrite(FRONT_RIGHT_DIR, direction);
+      digitalWrite(FRONT_RIGHT_DIR, direction ? HIGH : LOW);
       ledcWrite(FRONT_RIGHT, speed);
       return;
     case BACK_LEFT:
-      digitalWrite(BACK_LEFT_DIR, direction);
+      digitalWrite(BACK_LEFT_DIR, direction ? HIGH : LOW);
       ledcWrite(BACK_LEFT, speed);
       return;
     case BACK_RIGHT:
-      digitalWrite(BACK_RIGHT_DIR, direction);
+      digitalWrite(BACK_RIGHT_DIR, direction ? HIGH : LOW);
       ledcWrite(BACK_RIGHT, speed);
       return;
     default:
+      // Handle invalid motor index, if necessary
       return;
   }
 }
 
 void differentialDrive(int speed, int distance, int turnPercent) {
-  writeMotor(0, 0);
+//  writeMotor(uint8_t motor, int speedVector)
 } 

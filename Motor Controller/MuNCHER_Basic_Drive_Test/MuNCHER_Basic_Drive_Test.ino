@@ -191,3 +191,39 @@ void writeMotor(uint8_t motor, int output) {
 void differentialDrive(int speed, int distance, int turnPercent) {
 //  writeMotor(uint8_t motor, int speedVector)
 } 
+
+void parseAndAssignMotorValues(const std::string& val) {
+  // First step is to handle the comma delimiter and include exceptions if first and last index are not 'a'
+  if (val.front() == 'a' && val.back() == 'a') {
+    std::stringstream ss(val.substr(1, val.length() - 2)); // remove the first and last
+    std::string token; // temp variable that when looping through ss, we store each value
+
+    int counter = 0;
+    while (getline(ss, token, ',')) {
+      int value = std::stoi(token); 
+      if (counter == 0) {
+        setPointFrontLeft = value;
+
+      } else if (counter == 1) {
+        setPointFrontRight = value;
+
+      } else if (counter == 2) {
+        setPointBackLeft = value;
+
+      } else if (counter == 3) {
+        setPointBackRight = value;
+      }
+
+      counter ++;
+    }
+      // convert the token to an integer 
+       // this is a temporary variable that stores int of current token
+    
+    if (counter != 4) {
+      std::cerr << "Incorrect number of values provided." << std::endl;
+
+} else {
+      std::cerr << "Input string format is incorrect." << std::endl;
+    }
+  }
+}

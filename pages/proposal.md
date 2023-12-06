@@ -22,3 +22,6 @@ One of the requirements of PIE is to create a project with a non-trivial electri
 
 
 Feel free to check out <a href="https://github.com/LeNPaul/jekyll-starter-kit" target="_blank">the page</a>, where you’ll find what we finished in the first two weeks.
+
+
+Let's test what this does to the page. 

@@ -1,42 +1,32 @@
 ---
 layout: post
-title: "Welcome to Millennial!"
-author: "Paul Le"
-categories: documentation
-tags: [documentation,sample]
-image: cuba-1.jpg
+title: What is MuNCHER?
+author: "Team"
+image: rover_concept.png
+permalink: /what_is_muncher
 ---
 
-Millennial is a minimalist Jekyll theme. The purpose of this theme is to provide a simple, clean, content-focused blogging platform for your personal site or blog. Below you can find everything you need to get started.
+The MuNCHER (**Multidirectionally Navigable and Computationally Helmed Exploratory Rover**) is a: 4-wheel, autonomous, first person VR drive, talking Mars Rover inspired robot built by [students at the Olin College of Engineering]().
 
-## Getting Started
+When we started [brainstorming]() this project on October 16, 2023 we wanted to create a robust robotic vehicle that could navigate [Parcel B](), the forest behind Olin College, and collect multiple soil samples using a retrofitted drill and lazy susan storage mechanism. 
 
-[Getting Started]({{ site.github.url }}{% post_url 2016-10-10-getting-started %}): getting started with installing Millennial, whether you are completely new to using Jekyll, or simply just migrating to a new Jekyll theme.
 
-## Example Content
+"Share more about how the project was broken up -- 6 week sprints, share a calendar image that shows this, will be cooler, can even sketch goal v. accomplished"
 
-[Text and Formatting]({{ site.github.url }}{% post_url 2016-09-09-text-formatting %})
+### Demo media
 
-## Questions?
+#### Final Demo Video after 6 weeks
 
-This theme is completely free and open source software. You may use it however you want, as it is distributed under the [MIT License](http://choosealicense.com/licenses/mit/). If you are having any problems, any questions or suggestions, feel free to [tweet at me](https://twitter.com/intent/tweet?text=My%20question%20about%20Millennial;via=paululele), or [file a GitHub issue](https://github.com/lenpaul/Millennial/issues/new).
 
-## More Jekyll!
+#### Final Demo Images after 6 weeks
 
-### Lagrange
+### Table breakdown of what we accomplished in each sprint
 
-Lagrange is a minimalist Jekyll blog theme that I built from scratch. The purpose of this theme is to provide a simple, clean, content-focused blogging platform for your personal site or blog.
+| Sprint | Mechanical                                        | Electrical                                         | Software                                                                                          |
+|--------|---------------------------------------------------|----------------------------------------------------|---------------------------------------------------------------------------------------------------|
+| 1      | First version of drivetrain and suspension modules designed and fabricated. First version of the soil sampler design complete. | Battery wiring, motor controller sealing and wires attached to ESP32 | Arduino code so we can control and move the robot around.                                        |
+| 2      | Redesign and fabrication of drivetrain and suspension complete. Soil sampler design finalized and system fabricated. | Wired Jetson, ESP32, CNC Motor Shield, Stepper motors, batteries onto the rover. | Remote controlled the rover through a combination of keyboard inputs on a JS application to a Jetson Nano to one of our ESP32’s. |
+| 3      | Final soil sampling mechanical design revisions. Added body panels as electrical enclosures. Mechanical design for soil sampling turret. | Integrated soil sampling on linear slides, added a turret based seed dispenser to the side of the rover, an FPV camera/VR headset, USB Camera, Attached blue LEDs to the bottom of the rover. | Wrote a low level driver for the soil sampling drill, write high level code to communicate with the soil sampler, calibrated and detected april tags with USB camera, got the rover to talk using an LLM. |
 
-Feel free to check out <a href="https://lenpaul.github.io/Lagrange/" target="_blank">the demo</a>, where you’ll also find instructions on <a href="https://lenpaul.github.io/Lagrange/journal/getting-started.html">how to use install</a> and use the theme.
 
-### Portfolio Jekyll Theme
-
-This is a Jekyll theme built using the [DevTips Starter Kit](http://devtipsstarterkit.com/) as a foundation for starting, and following closely the amazing tutorial by [Travis Neilson over at DevTips](https://www.youtube.com/watch?v=T6jKLsxbFg4&list=PL0CB3OvPhDA_STygmp3sDenx3UpdOMk7P). The purpose of this theme is to provide a clean and simple website for your portfolio. Emphasis is placed on your projects, which are shown front and center on the home page.
-
-Everything that you will ever need to know about this Jekyll theme is included in [the repository](https://github.com/LeNPaul/portfolio-jekyll-theme), which you can also find in [the demo site](https://lenpaul.github.io/portfolio-jekyll-theme/).
-
-### Jekyll Starter Kit
-
-The Jekyll Starter Kit is a simple framework for starting your own Jekyll project using all of the best practices that I learned from building my other Jekyll themes.
-
-Feel free to check out <a href="https://github.com/LeNPaul/jekyll-starter-kit" target="_blank">the GitHub repository</a>, where you’ll also find instructions on how to use install and use the theme.
+Feel free to check out <a href="https://github.com/LeNPaul/jekyll-starter-kit" target="_blank">the page</a>, where you’ll find what we finished in the first two weeks.

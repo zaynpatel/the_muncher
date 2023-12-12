@@ -5,23 +5,30 @@ author: "Kenta, Ian, Matt, Mihir, Zayn"
 categories: documentation
 tags: [documentation,sample]
 image: rover_concept.png
-permalink: /welcome-to-millenial/
+permalink: /proposal
 ---
 
-The MuNCHER is an acronym for **Multidirectionally Navigable and Computationally Helmed Exploratory Rover.** 
+The MuNCHER (**Multidirectionally Navigable and Computationally Helmed Exploratory Rover**) is a: 4-wheel, autonomous, first person VR drive, talking Mars Rover inspired robot built by [students at the Olin College of Engineering]().
 
-Our idea is to create a robust robotic vehicle that navigates [Parcel B]() and performs a variety of functions. It is inspired by existing projects like the Mars Curiosity Rover and FPV RC Cars. Below is a table that details our ideation into each of the different required categories for the project, and whether each idea is a reach goal or an MVP goal.
+When we started [brainstorming]() this project on October 16, 2023 we wanted to create a robust robotic vehicle that could navigate [Parcel B](), the forest behind Olin College, and collect multiple soil samples using a retrofitted drill and lazy susan storage mechanism. 
 
-### Electromechanical and software requirements
-In our initial project proposal we outlined our MVP (by week 2), our goal (by week 6), and stretch features we'd like to add if we reach our goal early. 
 
-One of the requirements of PIE is to create a project with a non-trivial electrical, mechanical, and software system so our group brainstormed how we'd complete this:
+"Share more about how the project was broken up -- 6 week sprints, share a calendar image that shows this, will be cooler, can even sketch goal v. accomplished"
 
-| Table      | MVP                                                        | Goal                                                        | Reach                                                     |
-|------------|------------------------------------------------------------|-------------------------------------------------------------|-----------------------------------------------------------|
-| Mechanical | - Working Drivetrain <br> - Robust Suspension System to go over obstacles in Parcel B | - Soil Sampling Mechanism <br> - Aesthetic Pieces to make MuNCHER look like a decided Rover design | - Robotic arm claw mechanism <br> - Shooting Mechanism    |
-| Electrical | - Sufficiently wired to support driving forward and backward | - Implement LED Lights                                      | - Controllable LEDs based on sensor input <br> - Integrated sensors for 360 FOV |
-| Software   | - Driven by live inputs from remote controller             | - First Person View Controllability with VR headset         | - Computationally-Aided Driving (alerts about nearby objects) <br> - LLM Commands |
+### Demo media
+
+#### Final Demo Video after 6 weeks
+
+
+#### Final Demo Images after 6 weeks
+
+### Table breakdown of what we accomplished in each sprint
+
+| Sprint | Mechanical                                        | Electrical                                         | Software                                                                                          |
+|--------|---------------------------------------------------|----------------------------------------------------|---------------------------------------------------------------------------------------------------|
+| 1      | First version of drivetrain and suspension modules designed and fabricated. First version of the soil sampler design complete. | Battery wiring, motor controller sealing and wires attached to ESP32 | Arduino code so we can control and move the robot around.                                        |
+| 2      | Redesign and fabrication of drivetrain and suspension complete. Soil sampler design finalized and system fabricated. | Wired Jetson, ESP32, CNC Motor Shield, Stepper motors, batteries onto the rover. | Remote controlled the rover through a combination of keyboard inputs on a JS application to a Jetson Nano to one of our ESP32’s. |
+| 3      | Final soil sampling mechanical design revisions. Added body panels as electrical enclosures. Mechanical design for soil sampling turret. | Integrated soil sampling on linear slides, added a turret based seed dispenser to the side of the rover, an FPV camera/VR headset, USB Camera, Attached blue LEDs to the bottom of the rover. | Wrote a low level driver for the soil sampling drill, write high level code to communicate with the soil sampler, calibrated and detected april tags with USB camera, got the rover to talk using an LLM. |
 
 
 

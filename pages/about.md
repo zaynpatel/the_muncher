@@ -6,7 +6,6 @@ permalink: /about
 
 ### Team
 
-Testing on Matt's computer.
 ![Ian Walsh]()
 
 ![Kenta Terasaki]()

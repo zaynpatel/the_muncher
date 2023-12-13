@@ -7,9 +7,8 @@ disqus:
 google-ID: 'UA-112060364-2'
 
 menu:
-- {name: 'Mechanical Design' , url: 'resources'}
-- {name: 'Electrical Design',       url: 'sample-posts'}
-- {name: 'Firmware Design',      url: 'documentation'}
+- {name: 'Mechanical Design' , url: 'mechdes'}
+- {name: 'Electrical Design',       url: 'elecdes'}
 - {name : 'Software Design', url: 'softdes'}
 - {name: 'About',              url: 'about'}
 

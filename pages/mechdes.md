@@ -98,9 +98,11 @@ Similarly, we wanted adaptability for our camera mounts. We knew the general are
 
 ![insert pics of the camera mounts](https://zaynpatel.github.io/the_muncher//assets/img/cammount.png)
 
-Finally, and perhaps most importantly, our limit switch mounts. We use [X number] of them, two for the soil sampler, one for the turret-based seed disperser, etc. The mounts needed to be sturdy but did not need to withstand great force; the only critical design consideration was ensuring there were no undesired interferences with moving parts.
+Finally, and perhaps most importantly, our limit switch mounts. We use three of them: one for the soil sampler upper limit, one for the soil sampler tool changer, and one for the turret-based seed disperser. The mounts needed to be sturdy but did not need to withstand great force; the only critical design consideration was ensuring there were no undesired interferences with moving parts.
 
 ![insert image of one of our limit switches](https://zaynpatel.github.io/the_muncher//assets/img/limitswitch.png)
+
+The limit switch shown above is the soil sampler upper limit.
 
 ## Considerations for Future Work
 

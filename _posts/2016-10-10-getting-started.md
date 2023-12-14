@@ -2,7 +2,7 @@
 layout: post
 title: Photos and Videos
 author: "Team"
-image: rover_concept.png
+image: munchie3.png
 permalink: /photo_gallery
 ---
 

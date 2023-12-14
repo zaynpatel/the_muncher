@@ -2,7 +2,7 @@
 layout: post
 title: Financial Summary
 author: "Team"
-image: rover_concept.png
+image: munchie2.jpg
 permalink: /bill_of_materials
 ---
 

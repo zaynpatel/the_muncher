@@ -2,7 +2,7 @@
 layout: post
 title: What is MuNCHER?
 author: "Team"
-image: rover_concept.png
+image: munchie1.png
 permalink: /what_is_muncher
 ---
 

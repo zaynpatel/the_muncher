@@ -1,10 +1,9 @@
 ---
 layout: post
-title: "Financial Summary"
-author: "Matt Farmar"
-categories: facts
-tags: [sample]
-image: cuba-2.jpg
+title: Financial Summary
+author: "Team"
+image: rover_concept.png
+permalink: /bill_of_materials
 ---
 
 Below you can find our itemized Bill of Materials for the MuNCHER project.

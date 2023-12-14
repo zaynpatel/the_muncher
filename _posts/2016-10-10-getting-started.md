@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Photos and Videos"
-author: ""
-categories: documentation
-image: 
+title: Photos and Videos
+author: "Team"
+image: rover_concept.png
+permalink: /photo_gallery
 ---
 
 # MuNCHER

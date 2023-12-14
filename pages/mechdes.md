@@ -23,7 +23,7 @@ Our chassis is approx. 19.5” x 17” and consists of an 80-20 and C-Channel fr
 #### Soil Sampler
 Our soil sampling assembly uses a CNC-style tool changer and retrofitted power drill to collect soil and store the samples on board the rover before swapping cartridges and repeating the process. The linear actuation for drilling and collecting the soil samples uses dual lead screws, powered by stepper motors, and an x-rail vertical track. 
 
-![insert image of soil sampler](https://zaynpatel.github.io/the_muncher//assets/img/soilsampler.gif)
+![insert image of soil sampler](https://zaynpatel.github.io/the_muncher//assets/img/soilsampler.png)
 
 #### Seed Disperser
 This pan-tilt system uses a stepper motor-driven lazy susan and dual servo-driven tilt actuation to aim. The dispersion mechanism uses a spring-loaded linkage to store energy before releasing quickly and launching seed in the targeted direction.

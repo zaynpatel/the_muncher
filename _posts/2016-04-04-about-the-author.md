@@ -1,10 +1,14 @@
 ---
 layout: post
-title: "About the Author"
-author: "Paul Le"
+title: "Financial Summary"
+author: "Matt Farmar"
 categories: facts
 tags: [sample]
 image: cuba-2.jpg
 ---
 
-Hi there! I'm Paul. I’m a physics major turned programmer. Ever since I first learned how to program while taking a scientific computing for physics course, I have pursued programming as a passion, and as a career. Check out [my personal website](https://www.lenpaul.com/) for more information on my other projects (including more Jekyll themes!), as well as some of my writing.
+Below you can find our itemized Bill of Materials for the MuNCHER project.
+
+![insert BOM image here]()
+
+The scavenged items (not purchased) have cost approximations and do not contribute to the overall $250 project budget. The left total shows the overall cost while the right total (in green) shows the actual expenditures.

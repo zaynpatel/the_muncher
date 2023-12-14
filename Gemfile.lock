@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    millennial (2.0.0)
+    MuNCHER (2.0.0)
       jekyll (~> 4.2)
       jekyll-feed (~> 0.6)
       jekyll-paginate (~> 1.1)
@@ -81,7 +81,7 @@ PLATFORMS
   arm64-darwin-20
 
 DEPENDENCIES
-  millennial!
+  MuNCHER!
 
 BUNDLED WITH
    2.4.21

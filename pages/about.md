@@ -6,12 +6,15 @@ permalink: /about
 
 ### Team
 
-![Ian Walsh]()
+[Ian Walsh](https://www.linkedin.com/in/walshi/)
 
-![Kenta Terasaki]()
+[Kenta Terasaki](https://www.linkedin.com/in/kenta-terasaki/)
 
-![Matt Farmar]()
+[Matt Farmar](https://www.linkedin.com/in/matthew-farmar-ba146126a/)
 
-![Mihir Vemuri]()
+[Mihir Vemuri](https://www.linkedin.com/in/mihir-vemuri-ab6993217/)
 
-![Zayn Patel]()
+[Zayn Patel](https://www.linkedin.com/in/zaynpatel/)
+
+![MunCher Team Photo](/assets/img/teamphoto.png)
+**Pictured in a U-shape: Ian Walsh, Zayn Patel, Kenta Terasaki, Mihir Vemuri, Matt Farmar**

@@ -33,5 +33,7 @@ The robot contains two camera systems. One is a generic USB camera that is used 
 #### Seed Dispenser 
 The seed dispenser uses a NEMA-27 Stepper motor, two REV Servo Motors, a 3.3V DC motor, a limit switch, and a red dot laser in terms of electrical components. The Limit switch sets the 0 position of our stepper pan mechanism. All of the components are connected to IO pins on the ESP-32+++++.
 
+![Electronics](https://zaynpatel.github.io/the_muncher//assets/img/esp.png)
+
 ## Considerations for Future Work
 We would like to reorganize where the Jetson Nano is located as well as reorganizing some of the wire runs. The Jetson Nano is currently placed on the bottom plate which makes it susceptible to damage from water and mud. It also has many cables that go into it and is cramped when in such a small slot. For the future, we would like to relocate the Jetson Nano to a higher level on the rover. 

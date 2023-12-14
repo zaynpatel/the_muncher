@@ -1,18 +1,24 @@
 ---
-layout: category
-title: Learning Resources
+layout: post
+title: Mechanical Design
+author: "Matt Farmar"
+date: December 15, 2023
 category: resources
 permalink: /mechdes
 ---
 
 ## Overall System Design
 Our full-system mechanical design consists of four main components – drivetrain, chassis, soil sampler, and seed disperser – as well as miscellaneous mounts, supports, and body panels. 
+
 ### Drivetrain
 DC motors power the off-road wheels via direct drive, and the 3D printed couplers add support to counteract the cantilever caused by the length and weight of the motors. The direct drive system is mounted to our suspension arms, which can rotate along the path of a curved slot that keeps the retention pin at a fixed radius from the bearing-based rotation point. 
+
 ### Chassis
 Our chassis is approx. 19.5” x 17” and consists of an 80-20 and C-Channel frame with a wooden laser-cut base plate. Between these three mediums, we have patterned holes, slide channels, and the capability of custom-drilled mounting holes. The 80-20 interfaces with itself perpendicularly via custom-machined 10-32 taps. The 80-20 and C-Channel connect via custom-designed, wooden interface plates that we laser cut. Finally, the C-Channel and base plate interface via 6-32 screws and nuts. 
+
 ### Soil Sampler
 Our soil sampling assembly uses a CNC-style tool changer and retrofitted power drill to collect soil and store the samples on board the rover before swapping cartridges and repeating the process. The linear actuation for drilling and collecting the soil samples uses dual lead screws, powered by stepper motors, and an x-rail vertical track. 
+
 ### Seed Disperser
 This pan-tilt system uses a stepper motor-driven lazy susan and dual servo-driven tilt actuation to aim. The dispersion mechanism uses a spring-loaded linkage to store energy before releasing quickly and launching seed in the targeted direction.
 

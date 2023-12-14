@@ -1,7 +1,7 @@
 # Change 'comments' to true for Disqus comments
 disqus:
   comments: false
-  disqus_shortname: 'millennial-3'
+  disqus_shortname: 'MuNCHER'
 
 # If you are not using Google Analytics, please change 'google-ID' to an empty string
 google-ID: 'UA-112060364-2'
@@ -20,7 +20,3 @@ social:
 pagination:
   next_page: 'Newer'
   previous_page: 'Older'
-
-sharing_button_prompt: 'Feel free to share!'
-
-post_date_prefix: 'Written on December 15, 2023'

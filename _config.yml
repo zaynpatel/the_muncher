@@ -10,9 +10,9 @@ permalink:           /:title
 plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-tag]
 
 # Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
-title:		           "Millennial"
-description:	       "a minimalist Jekyll theme for running a blog or publication"
-author:              "Paul Le"
+title:		           "MuNCHER"
+description:	       "Soil Sampling Robot"
+author:              "Matt Farmar, Ian Walsh, Kenta Terasaki, Zayn Patel, and Mihir Vemuri"
 #baseurl: "/the_muncher" # the subpath of your site, e.g. /blog
 #url: "https://zaynpatel.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 

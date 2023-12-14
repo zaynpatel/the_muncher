@@ -37,23 +37,23 @@ The reason behind this decision was to offer flexibility amid rough terrain, cus
 
 In execution, we met many of our design goals but found several pitfalls through preliminary testing. The vertical motors did create extra space under the chassis base plate, but the bevel gears they required did not mesh perfectly. Based on the available budget and materials, the only accessible bevel gears and motor shaft couplers were undersized. This caused problems in the form of grinding gears and lost power. Furthermore, the structure containing the bevel gear assembly ended up being bulkier than the motors themselves, thus negatively impacting ground clearance relative to the alternative. 
 
-![insert picture of sprint one drivetrain]()
+![insert picture of sprint one drivetrain](https://zaynpatel.github.io/the_muncher//assets/img/suspensionmodule2.png)
 
 Considering these factors at the end of the first two-week sprint, we knew we had to pivot away from the design dependent upon the bevel gear assembly. Moreover, our suspension modules were cut from acrylic because it was accessible and aesthetic. After realizing how much force would be exerted on the modules during driving periods and having some of the acrylic panels crack or even snap, we knew we needed to change materials. We went back to the drawing board for sprint two, but before redesigning we wanted to evaluate our assumptions with some field research. 
 
-![insert field research flicks]()
+![insert field research flicks](https://zaynpatel.github.io/the_muncher//assets/img/fieldresearch.png)
 
 After an afternoon out in Parcel B collecting data and gaining a deeper understanding of the terrain, we revised some assumptions we made. The terrain was rough but not as steep as expected. Because the wheel diameter is much greater than that of the drive motors. We also noticed the rocks on the desired drive path were not as big as anticipated, meaning there would be no interference with changing to a direct drive system. This design change removed all our bevel gear-related problems. After building the direct drive, however, we noticed the weight of the cantilevered motors caused them to bow, so we 3D printed a coupling joint to fix them in place. During our field research, we also gained a better understanding of requisite ground clearance based on the greatest ground imbalances, which topped out at about 6-7 inches. Furthermore, we realized that our vertical suspension modules would not be practical. Since there are no big jumps, most of the force absorbed would be from the front, not directly from the bottom. This would result with a torque being exerted on the vertical system, so we redesigned the suspension to be situated at an angle to best absorb these forces. 
 
 We accomplished this by designing wooden suspension arms that can pivot about the path of a curved slot. 
 
-![insert gif of pivoting suspension arm]()
+![insert gif of pivoting suspension arm](https://zaynpatel.github.io/the_muncher//assets/img/pivotingarm.gif)
 
 This slot allows us to control the maximum expansion and compression of the suspension system but does not use springs to dampen the oscillation. 
 
 As for our chassis, we used 80-20 and C-Channel to build a sturdy frame about 19.5” long by about 17” wide. We determined these dimensions based on what components we needed to store on the chassis base plate and how much space each would consume.
 
-![insert image of chassis CAD]()
+![insert image of chassis and its CAD](https://zaynpatel.github.io/the_muncher//assets/img/chassis.png)
 
 Overall, after fully fabricating the above design changes, our design was much more effective. The driving was smoother, and the rover even showed a better resemblance toward our original design inspiration, Mars Curiosity.
 
@@ -62,6 +62,8 @@ Our goal was to have The MuNCHER take soil samples while on off-roading missions
 
 The initial concept was to make a design inspired by a CNC tool changer with a rotatable plate that stores multiple cartridges. The chuck fastens and unfastens by keeping the head of the drill stationary with a male gear face on the head of the drill chuck and a complementary female gear face on the cartridge slots. Then the drill spins clockwise to tighten and counter-clockwise to loosen. The drill is mounted to a linear slide with dual lead screws and the cartridge plate revolves around a stepper motor with a custom bearing. Limit switches attached to the top of the x-rail and on the path of the cartridge plate zero both systems accurately. 
 
+![insert CAD image and picture of soil sampler](https://zaynpatel.github.io/the_muncher//assets/img/soilsampler.png)
+
 When manufacturing the soil sampler, we ran into the issue that the lead screws for the drill weren't drilled precisely. We ended up laser cutting the base plate before finalizing the lead screw location due to time constraints and because of our limited amount of materials, we weren't able to make a new one. This led us to make variable arms that attach from the lead screws to the drill. The lead screws also have elastic couplers that permit the lead screws some freedom to comply with tolerances. 
 
 These design decisions allow for the smooth operation and collection of up to four soil samples during one mission.
@@ -69,7 +71,7 @@ These design decisions allow for the smooth operation and collection of up to fo
 #### Seed Disperser
 The seed disperser was an additional mechanism we created as a proof of concept of an eventual turret we wanted to add to the MuNCHER. The lego-inspired mechanism utilizes a spring loaded linkage to shove any item out of the channel. 
 
-![insert image of seed disperser]()
+![insert image of seed disperser](https://zaynpatel.github.io/the_muncher//assets/img/fieldresearch.png)
 
 This linkage utilizes a 3.3V DC motor with a torqued gearbox. This allows for ample pushing force to cock back the spring. The seed disperser is mounted on a pan/tilt mechanism. The pan aspect utilizes a Nema-27 stepper motor and a lazy susan bearing, and the tilt aspect uses two REV smart continuous servos. This subsystem was designed to be interchangeable, and potential future ideas for the existing infrastructure include a turret mechanism, robotic arm, or high powered light. The turret also includes a built in red dot laser, which is controllable via a mosfet circuit.
 
@@ -77,21 +79,21 @@ This linkage utilizes a 3.3V DC motor with a torqued gearbox. This allows for am
 
 The MuNCHER uses a multitude of different processors and motor controllers (all described in more detail on the Electrical Design page), and exposing the rover’s electronic components to the harsh environmental conditions of a New England winter would spell a recipe for disaster. So, we designed and built protective body panels with an eye toward modularity and aesthetics. The first design decision to be made was the material. The major criteria were accessibility and aesthetics, given durability is negligible considering the pieces are not structural in any way, so we chose blue acrylic. 
 
-![insert image of body panels]()
+![insert image of body panels](https://zaynpatel.github.io/the_muncher//assets/img/fieldresearch.png)
 
 This balance between form and function protects our valuable and hydrophobic electronics while encasing the rover with translucent colored panels that allow you to still see the inner workings of the system. 
 
 From a mounting perspective, we wanted to focus on modularity and adaptability. For the body panels, this meant mounts that could attach at many different places. The C-Channel we use around the perimeter of the chassis has a repeating pattern, so we 3D printed rectangular prism mounts that sit in the C-Channel and can attach at mounting holes anywhere along the length of the piece. This design flexibility helps with fabrication accessibility because we can avoid interferences with the other screws and wires running through the channel. To further support design flexibility, our body panel mounts have ovular slots where the body panels attach so that the body panels can be optimized with minor adjustments post-fabrication. 
 
-![insert image of body panel mount CAD file]()
+![insert image of body panel mount CAD file](https://zaynpatel.github.io/the_muncher//assets/img/fieldresearch.png)
 
 Similarly, we wanted adaptability for our camera mounts. We knew the general area of where to best mount them, but for optimized performance we added several sets of mounting holes so that we could test different positions without redesigning the 3D print. 
 
-![insert pics of the camera mounts]()
+![insert pics of the camera mounts](https://zaynpatel.github.io/the_muncher//assets/img/fieldresearch.png)
 
 Finally, and perhaps most importantly, our limit switch mounts. We use [X number] of them, two for the soil sampler, one for the turret-based seed disperser, etc. The mounts needed to be sturdy but did not need to withstand great force; the only critical design consideration was ensuring there were no undesired interferences with moving parts.
 
-![insert image of one of our limit switches]()
+![insert image of one of our limit switches](https://zaynpatel.github.io/the_muncher//assets/img/fieldresearch.png)
 
 ## Considerations for Future Work
 

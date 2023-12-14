@@ -12,7 +12,7 @@ Our full-system mechanical design consists of four main components – drivetrai
 
 ### Drivetrain
 DC motors power the off-road wheels via direct drive, and the 3D printed couplers add support to counteract the cantilever caused by the length and weight of the motors. The direct drive system is mounted to our suspension arms, which can rotate along the path of a curved slot that keeps the retention pin at a fixed radius from the bearing-based rotation point. 
-!([Animated Exploded View]/assets/img/animated.gif)
+![Animated Exploded View](/assets/img/animated.gif)
 
 ### Chassis
 Our chassis is approx. 19.5” x 17” and consists of an 80-20 and C-Channel frame with a wooden laser-cut base plate. Between these three mediums, we have patterned holes, slide channels, and the capability of custom-drilled mounting holes. The 80-20 interfaces with itself perpendicularly via custom-machined 10-32 taps. The 80-20 and C-Channel connect via custom-designed, wooden interface plates that we laser cut. Finally, the C-Channel and base plate interface via 6-32 screws and nuts. 

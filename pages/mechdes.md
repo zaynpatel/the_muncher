@@ -69,7 +69,7 @@ Our goal was to have The MuNCHER take soil samples while on off-roading missions
 
 The initial concept was to make a design inspired by a CNC tool changer with a rotatable plate that stores multiple cartridges. The chuck fastens and unfastens by keeping the head of the drill stationary with a male gear face on the head of the drill chuck and a complementary female gear face on the cartridge slots. Then the drill spins clockwise to tighten and counter-clockwise to loosen. The drill is mounted to a linear slide with dual lead screws and the cartridge plate revolves around a stepper motor with a custom bearing. Limit switches attached to the top of the x-rail and on the path of the cartridge plate zero both systems accurately. 
 
-![insert image of soil sampler CAD](https://zaynpatel.github.io/the_muncher//assets/img/soilsamplercad.jpg)
+![insert image of soil sampler CAD](https://zaynpatel.github.io/the_muncher//assets/img/soilsamplercad.JPG)
 
 When manufacturing the soil sampler, we ran into the issue that the lead screws for the drill weren't drilled precisely. We ended up laser cutting the base plate before finalizing the lead screw location due to time constraints and because of our limited amount of materials, we weren't able to make a new one. This led us to make variable arms that attach from the lead screws to the drill. The lead screws also have elastic couplers that permit the lead screws some freedom to comply with tolerances. 
 
@@ -78,7 +78,7 @@ These design decisions allow for the smooth operation and collection of up to fo
 #### Seed Disperser
 The seed disperser was an additional mechanism we created as a proof of concept of an eventual turret we wanted to add to the MuNCHER. The lego-inspired mechanism utilizes a spring loaded linkage to shove any item out of the channel. 
 
-![insert image of seed disperser](https://zaynpatel.github.io/the_muncher//assets/img/seeddispersercad.jpg)
+![insert image of seed disperser](https://zaynpatel.github.io/the_muncher//assets/img/seeddispersercad.JPG)
 
 This linkage utilizes a 3.3V DC motor with a torqued gearbox. This allows for ample pushing force to cock back the spring. The seed disperser is mounted on a pan/tilt mechanism. The pan aspect utilizes a Nema-27 stepper motor and a lazy susan bearing, and the tilt aspect uses two REV smart continuous servos. This subsystem was designed to be interchangeable, and potential future ideas for the existing infrastructure include a turret mechanism, robotic arm, or high powered light. The turret also includes a built in red dot laser, which is controllable via a mosfet circuit.
 

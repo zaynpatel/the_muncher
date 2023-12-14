@@ -9,7 +9,7 @@ permalink: /softdes
 ## Design Goals
 Firmware design on the rover can be divided into two component halves: a low-level driver to operate the soil sampler and parsing code to connect the front-end interface with the jetson nano. The driver functions as a command tool to work with several hardware components like stepper motors, drill, platter, turret, and servo motors.
 
-We wrote low level firmware for the Soil Sampler and Turret to interact with the ESP32s. The software we wrote was for april tag calibration, tts/stt, parsing code, gstreamer pipeline, motor controller 
+We wrote low level firmware for the Soil Sampler and Turret to interact with the ESP32s. The software we wrote was for april tag calibration, tts/stt, parsing code, gstreamer pipeline, motor controller.
  
 ## Implemented Solutions, Decision Explanations, and Iterations
 

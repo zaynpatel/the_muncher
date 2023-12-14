@@ -1,7 +1,9 @@
 ---
-layout: category
-title: Sample Posts
-category: sample
+layout: post
+title: Electrical Design
+author: "Ian Walsh"
+date: December 15, 2023
+category: resources
 permalink: /elecdes
 ---
 ## Design Goals

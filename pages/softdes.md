@@ -1,7 +1,9 @@
 ---
-layout: category
-title: Documentation
-category: documentation
+layout: post
+title: Software Design
+author: "Zayn Patel"
+date: December 15, 2023
+category: resources
 permalink: /softdes
 ---
 ## Design Goals

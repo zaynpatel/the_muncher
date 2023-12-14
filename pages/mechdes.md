@@ -31,7 +31,7 @@ The principal goals of our mechanical design were robustness, reliability, and a
 #### Drivetrain/Chassis
 Our initial brainstorming yielded a design centered around individual suspension modules. The modules were designed with a bevel drive system so that the drive motors could be mounted vertically, with the idea being that this would maximize ground clearance by getting the body of the motors as far from the ground as possible. We also designed the infrastructure to support spring implementation to serve as suspension shocks.
 
-![insert suspension module sprint one CAD]() 
+![insert suspension module sprint one CAD](https://zaynpatel.github.io/the_muncher//assets/img/suspensionmodule.png) 
 
 The reason behind this decision was to offer flexibility amid rough terrain, cushion jumps and falls, and help maintain traction. In mild conditions, the springs were designed to compress to a minor extent due to largely the gravitational force exerted on them by the mass of the rover. In the case of a jump, the suspension modules begin to leave the ground, and the stored energy in the compressed springs extends the wheels downward to maintain ground contact for longer than if the system were rigid. Inversely, upon landing from the jump, the springs have excess travel distance so that they absorb the impact in the form of storing gravitational energy, thus limiting the impact on the more fragile components on board, i.e. the electronics and cameras. Once at full compression, the stored energy is large enough to re-exert force downward, re-elevating the ground clearance to riding height. 
 

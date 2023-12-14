@@ -96,7 +96,7 @@ From a mounting perspective, we wanted to focus on modularity and adaptability. 
 
 Similarly, we wanted adaptability for our camera mounts. We knew the general area of where to best mount them, but for optimized performance we added several sets of mounting holes so that we could test different positions without redesigning the 3D print. 
 
-![insert pics of the camera mounts](https://zaynpatel.github.io/the_muncher//assets/img/cammountcad.png)
+![insert pics of the camera mounts](https://zaynpatel.github.io/the_muncher//assets/img/cammount.png)
 
 Finally, and perhaps most importantly, our limit switch mounts. We use [X number] of them, two for the soil sampler, one for the turret-based seed disperser, etc. The mounts needed to be sturdy but did not need to withstand great force; the only critical design consideration was ensuring there were no undesired interferences with moving parts.
 

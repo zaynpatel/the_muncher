@@ -16,5 +16,6 @@ permalink: /about
 
 [Zayn Patel](https://www.linkedin.com/in/zaynpatel/)
 
-![MunCher Team Photo](/assets/img/teamphoto.png)
+![MuNCHER Team Photo](https://zaynpatel.github.io/the_muncher/assets/img/teamphoto.png)
+
 **Pictured in a U-shape: Ian Walsh, Zayn Patel, Kenta Terasaki, Mihir Vemuri, Matt Farmar**

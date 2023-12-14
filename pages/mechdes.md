@@ -53,7 +53,9 @@ This slot allows us to control the maximum expansion and compression of the susp
 
 As for our chassis, we used 80-20 and C-Channel to build a sturdy frame about 19.5” long by about 17” wide. We determined these dimensions based on what components we needed to store on the chassis base plate and how much space each would consume.
 
-![insert image of chassis and its CAD](https://zaynpatel.github.io/the_muncher//assets/img/chassis.png)
+Chassis CAD | Fabricated Chassis
+:-----------:|:-----------:
+![insert image of chassis and its CAD](https://zaynpatel.github.io/the_muncher//assets/img/chassiscad.png) | ![insert image of chassis and its CAD](https://zaynpatel.github.io/the_muncher//assets/img/chassis.png)
 
 Overall, after fully fabricating the above design changes, our design was much more effective. The driving was smoother, and the rover even showed a better resemblance toward our original design inspiration, Mars Curiosity.
 

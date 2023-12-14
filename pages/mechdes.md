@@ -92,3 +92,14 @@ Similarly, we wanted adaptability for our camera mounts. We knew the general are
 Finally, and perhaps most importantly, our limit switch mounts. We use [X number] of them, two for the soil sampler, one for the turret-based seed disperser, etc. The mounts needed to be sturdy but did not need to withstand great force; the only critical design consideration was ensuring there were no undesired interferences with moving parts.
 
 ![insert image of one of our limit switches]()
+
+## Considerations for Future Work
+
+#### Drivetrain/Wheel Improvements
+Our current motor-wheel assembly functions as intended but has room for improvement. The main problem right now is power loss while turning due to high friction between the wheels and the terrain. The original design goal was to maximize traction, so we used extremely soft wheels padded with flexible foam inserts to maximize the ground contact patch. We ended up being too successful in increasing friction, in fact, because tank steering couldn’t turn smoothly and even differential drive wasn’t ideal. To resolve this issue moving forward we would change the wheel softness by adding solid inserts or using different wheels entirely. This change would decrease the area of the contact patch and therefore decrease friction to make turning easier.
+
+#### Mechanical Design improvements
+A major issue with the drivetrain is the robustnes. The drivetrain is well put together and as mentioned earlier, functions as intended, but there were many design choices we made in the fabrication that contribute to the issues specified earlier. Firstly, since our axle couplers were drilled out to be a larger size for a design change in sprint 1, we had to add tapped set screws in each of the couplers, and this had an adverse effect of making our axles not entirely concentric. For future improvements, we would need completely new axle couplers, as the current ones have been overmodified. Another issue lies in the 3d printed motor coupler. This design decision accounted for using 4 milled Motor  clamps, but in it's current state, uses 3 milled pieces and 1 3d printed clamp due to us losing one of our clamps. This motor coupler has made the legs of our drive training move slightly outward, which increases the sag of the overall drivetrain.
+
+#### Weatherproofing
+Our body panels were made to be adjustable and therefore show gaps at the corners and intersections. As a temporary solution for outdoor driving, we used trash bags as waterproofing, but we will look toward more permanent solutions. If we were to redesign we would make the body panels more precisely dimensioned so the gaps are smaller and could be filled more easily.

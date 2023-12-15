@@ -2,6 +2,7 @@
 layout: post
 title: Financial Summary
 author: "Team"
+date: December 14, 2023
 image: munchie2.jpg
 permalink: /bill_of_materials
 ---

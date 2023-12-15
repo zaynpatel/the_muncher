@@ -2,6 +2,7 @@
 layout: post
 title: Photos and Videos
 author: "Team"
+date: December 14, 2023
 image: munchie3.png
 permalink: /photo_gallery
 ---

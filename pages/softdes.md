@@ -7,16 +7,26 @@ category: resources
 permalink: /softdes
 ---
 ## Design Goals
-Firmware design on the rover can be divided into two component halves: a low-level driver to operate the soil sampler and parsing code to connect the front-end interface with the jetson nano. The driver functions as a command tool to work with several hardware components like stepper motors, drill, platter, turret, and servo motors.
+Firmware design on the rover can be divided into two component halves: a low-level driver to operate the soil sampler, a high level Arduino script to interact with the soil sampler, and parsing code which acted as a passthrough between a JS front-end application, Jetson Nano, and ESP32s. 
 
-We wrote low level firmware for the Soil Sampler and Turret to interact with the ESP32s. The software we wrote was for april tag calibration, tts/stt, parsing code, gstreamer pipeline, motor controller.
+![Frontend App](https://zaynpatel.github.io/the_muncher//assets/img/frontend_App.png)
 
-Our code uses many external dependencies, including OpenCV, cv2, apriltag, numpy, etc.
+Our team added other features like AprilTag Detection so the rover could drive autonomously, a Turret to dispense seeds in Parcel B, and a text to speech/speech to text pipeline so humans could talk to the robot. 
+
+[Our code](https://github.com/olincollege/The-MuNCHER) used many external dependencies including:
+- socket
+- serial
+- apriltag library
+- OpenCV library
+- gstreamer pipeline
+- numpy 
  
 ## Implemented Solutions, Decision Explanations, and Iterations
 
 #### Soil Sampler Code
 The code works where commands are sent from the Jetson Nano that instructs the soil sampler to pick up a cartridge, retrieve a soil sample and return the cartridge to the same slot on the plate. The Jetson will send one digit that specifies which slot to pick up and another as an emergency abort message. The code orders commands between limit switches, lead screws, steppers and drill speed in a specified order to achieve the soil sampling capabilities. One issue that we faced was getting the stepper motor that controlled the cartridge plate to rotate to where the cartridges lay directly under the drill. This took a bit of guesswork and checking in order to get it to work properly.
+
+![insert image of soil sampler video](https://zaynpatel.github.io/the_muncher//assets/img/IMG_7064 2.MOV)
 
 #### App/ UI Code
 The app is a simple one-page Electron site that holds the key controls for the app including remote control drive modes (w, a, s, d), live stream from the USB camera, robot status (whether it’s connected to battery voltage or not), sampler controls (what sample it’s currently getting and whether or not it’s taking a sample). 

@@ -10,6 +10,8 @@ permalink: /elecdes
 
 The electrical system was designed to be modular, efficient, and rugged–especially under heavy loads. Power circuitry was designed to isolate MCU/logic from large inductive loads like the drivetrain and soil sampler, and attention was paid when routing data cables around the robot. 
 
+![Electrical Design Schematic](https://zaynpatel.github.io/the_muncher//assets/img/electricalSchematic.png)
+
 ## Implemented Solutions, Decision Explanations, and Iterations
 
 #### Power System

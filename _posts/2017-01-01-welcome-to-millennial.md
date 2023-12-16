@@ -7,12 +7,9 @@ image: munchie1.png
 permalink: /what_is_muncher
 ---
 
-The MuNCHER (**Multidirectionally Navigable and Computationally Helmed Exploratory Rover**) is a: 4-wheel, autonomous, first person VR drive, talking Mars Rover inspired robot built by [students at the Olin College of Engineering]().
+The MuNCHER (**Multidirectionally Navigable and Computationally Helmed Exploratory Rover**) is a: 4-wheel, autonomous, first person VR drive, talking Mars Rover inspired robot built by [students at the Olin College of Engineering](https://olin.edu/).
 
-When we started [brainstorming]() this project on October 16, 2023 we wanted to create a robust robotic vehicle that could navigate [Parcel B](), the forest behind Olin College, and collect multiple soil samples using a retrofitted drill and lazy susan storage mechanism. 
-
-
-"Share more about how the project was broken up -- 6 week sprints, share a calendar image that shows this, will be cooler, can even sketch goal v. accomplished"
+When we started brainstorming this project on October 16, 2023 we wanted to create a robust robotic vehicle that could navigate [Parcel B](), the forest behind Olin College, and collect multiple soil samples using a retrofitted drill and lazy susan storage mechanism. 
 
 
 ### Table breakdown of what we accomplished in each sprint

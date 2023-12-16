@@ -7,7 +7,7 @@ image: munchie3.png
 permalink: /photo_gallery
 ---
 
-# MuNCHER
+This page includes some of our team's favorite photos and videos during our 6 week sprint to build MuNCHER.
 
 ![insert photo and video gallery](https://zaynpatel.github.io/the_muncher//assets/img/sprint1.png)
 
@@ -15,7 +15,7 @@ permalink: /photo_gallery
 
 ![insert photo and video gallery](https://zaynpatel.github.io/the_muncher//assets/img/sprint2.png)
 
-**Spring 2 MuNCHER**
+**Sprint 2 MuNCHER**
 
 ![insert photo and video gallery](https://zaynpatel.github.io/the_muncher//assets/img/soilsamplertrial.png)
 

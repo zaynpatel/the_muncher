@@ -26,8 +26,6 @@ Our team added other features like AprilTag Detection so the rover could drive a
 #### Soil Sampler Code
 The code works where commands are sent from the Jetson Nano that instructs the soil sampler to pick up a cartridge, retrieve a soil sample and return the cartridge to the same slot on the plate. The Jetson will send one digit that specifies which slot to pick up and another as an emergency abort message. The code orders commands between limit switches, lead screws, steppers and drill speed in a specified order to achieve the soil sampling capabilities. One issue that we faced was getting the stepper motor that controlled the cartridge plate to rotate to where the cartridges lay directly under the drill. This took a bit of guesswork and checking in order to get it to work properly.
 
-![insert image of soil sampler video](https://zaynpatel.github.io/the_muncher//assets/img/IMG_7064 2.MOV)
-
 #### App/ UI Code
 The app is a simple one-page Electron site that holds the key controls for the app including remote control drive modes (w, a, s, d), live stream from the USB camera, robot status (whether it’s connected to battery voltage or not), sampler controls (what sample it’s currently getting and whether or not it’s taking a sample). 
 
